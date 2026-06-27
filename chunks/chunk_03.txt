@@ -1,0 +1,24 @@
+
+  Verification: Method1 - Method2 = 0.00e+00
+
+  Golden Angle in radians = 2.3999632297286531 rad
+  Golden Angle = 137.5077640500 degrees
+
+RELATIONSHIP TO PHI:
+  Full circle = 360 deg
+  Major arc = 360/phi = 222.4922359500 deg
+  Minor arc (Golden Angle) = 360/phi^2 = 137.5077640500 deg
+  Verification: Major + Minor = 360.0000000000 deg = 360 deg
+
+================================================================================
+SECTION 4: WAVE FUNCTION psi = A*sin(phi*theta) IN POLAR COORDINATES
+================================================================================
+
+DEFINITION: psi(theta) = A * sin(phi * theta)
+  where phi = 1.6180339887498949
+  A = amplitude (normalized to 1.0 for demonstration)
+
+WAVE FUNCTION VALUES AT KEY ANGLES:
+------------------------------------------------------------
+Angle (deg)    Angle (rad)       phi*theta (rad)   psi = A*sin(phi*theta)
+------------------------------------------------------------

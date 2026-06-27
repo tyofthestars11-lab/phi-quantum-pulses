@@ -1,0 +1,24 @@
+  2       6.8541019662        4.2360679775
+  3       17.9442719100       11.0901699437
+  4       46.9787137637       29.0344418537
+  5       122.9918693812      76.0131556175
+  6       321.9968943800      199.0050249987
+  7       842.9988137587      521.0019193787
+
+================================================================================
+SECTION 8: WAVE FUNCTION OSCILLATIONS AT GOLDEN ANGLE INTERVALS
+          FOR DECODING SCROLL LAYERS
+================================================================================
+
+LAYER DECODING MODEL:
+  Each scroll layer is sampled at golden angle intervals (137.5 deg)
+  The wave function psi encodes fiber orientation information.
+
+  Decoding function:
+  D(n, m) = psi(n * golden_angle + m * theta_tetrahedral)
+          = A * sin(phi * (n * GA + m * TA))
+  where GA = 2.3999632297286531 rad (137.5077640500 deg)
+        TA = 1.9106332362490186 rad (109.4712206345 deg)
+
+DECODING MATRIX D(n,m) - first 10 layers x 4 tetrahedral vertices:
+--------------------------------------------------------------------------------

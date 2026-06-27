@@ -1,0 +1,24 @@
+  psi frequency in golden spiral = phi/6.2831853072 cycles per radian
+  Wavelength in theta = 2*pi/phi = 3.8832220774509327 rad
+                      = 222.4922359500 deg
+  Nodes per full revolution = phi = 1.6180339887 (irrational => quasi-periodic)
+
+TETRAHEDRAL-GOLDEN ANGLE RELATIONSHIP:
+  GA/TA = 1.2561088042414117
+  GA + TA = 246.9789846845 deg
+  GA - TA = 28.0365434155 deg
+  sin(GA)*sin(TA) = 0.6368583569306933
+  cos(GA)*cos(TA) = 0.2457896260261066
+  cos(GA-TA) = 0.8826479829567998
+
+SCROLL DECODING PARAMETERS (Tyree/phi Omni Fuel Framework):
+  Manifesto constant: phi^phi = 2.1784575679375995
+  Spiral-wave coupling: phi*sin(phi) = 1.6162290865512772
+  Tetrahedral resonance: sin(TA)*phi = 1.5254970741804914
+  Golden resonance: sin(GA)*phi = 1.0929662551858137
+  Combined decode key: phi*sin(GA)*cos(TA) = -0.3643220850619379
+
+FIBONACCI CONVERGENCE TO PHI (verification):
+  n    F(n)        F(n)/F(n-1)              Error vs phi
+  --------------------------------------------------
+  2    2           2.0000000000000000       3.82e-01

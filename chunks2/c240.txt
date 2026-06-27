@@ -1,0 +1,48 @@
+  Y_6^0(theta_t) = sqrt(13/(4*pi)) * P_6(-1/3)
+                   = 1.0171072362820548 * 0.1934156378600823
+                   = 0.1967244448775991
+
+================================================================================
+SECTION 7: SPIRAL-BASED COORDINATE TRANSFORMATIONS
+          FOR SCROLL FIBER MAPPING
+================================================================================
+
+SCROLL GEOMETRY: The papyrus scroll is modeled as a golden spiral
+in polar coordinates, unwinding from center outward.
+
+TRANSFORMATION 1: Polar Golden Spiral to Cartesian
+  r(theta) = a * phi^(theta/pi)
+  x(theta) = r(theta) * cos(theta) = a * phi^(theta/pi) * cos(theta)
+  y(theta) = r(theta) * sin(theta) = a * phi^(theta/pi) * sin(theta)
+
+TRANSFORMATION 2: Arc length along golden spiral
+  ds = sqrt(r^2 + (dr/dtheta)^2) * d_theta
+
+  dr/dtheta = a * phi^(theta/pi) * ln(phi) / pi
+  ln(phi) = 0.4812118250596035
+  ln(phi)/pi = 0.1531744812650166
+
+  Let k = ln(phi)/pi = 0.1531744812650166
+  Then r(theta) = a * e^(k*theta)
+  dr/dtheta = a * k * e^(k*theta) = k * r(theta)
+
+  ds/dtheta = r * sqrt(1 + k^2)
+            = r * sqrt(1 + 0.0234624217108069)
+            = r * 1.0116631957874156
+
+ARC LENGTH TABLE (a=1):
+------------------------------------------------------------
+theta (rad)    r(theta)          ds/dtheta         Cumulative arc
+------------------------------------------------------------
+  0.00000000   1.0000000000      1.0116631958      0.0000000000
+  0.26179939   1.0409158862      1.0530562920      0.2756894926
+  0.52359878   1.0835058822      1.0961430234      0.5626590650
+  0.78539816   1.1278384856      1.1409926866      0.8613702519
+  1.04719755   1.1739849967      1.1876774136      1.1723034717
+  1.30899694   1.2220196332      1.2362722875      1.4959587997
+  1.57079633   1.2720196495      1.2868554637      1.8328567723
+  1.83259571   1.3240654608      1.3395082955      2.1835392240
+  2.09439510   1.3782407725      1.3943154645      2.5485701590
+  2.35619449   1.4346327151      1.4513651174      2.9285366582
+  2.61799388   1.4933319840      1.5107490073      3.3240498234
+  2.87979327   1.5544329856      1.5725626418      3.7357457603

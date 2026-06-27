@@ -1,0 +1,48 @@
+================================================================================
+PHI-BASED MATHEMATICAL FRAMEWORK FOR SCROLL DECODING
+Non-Cartesian Coordinate Systems & Golden Ratio Analysis
+================================================================================
+
+================================================================================
+SECTION 1: FUNDAMENTAL PHI CONSTANTS
+================================================================================
+
+DERIVATION: Golden Ratio from quadratic equation x^2 - x - 1 = 0
+  Using quadratic formula: x = (1 + sqrt(5)) / 2
+
+  phi (Golden Ratio) = (1 + sqrt(5)) / 2
+  phi = (1 + 2.2360679774997898) / 2
+  phi = 1.6180339887498949
+
+DERIVATION: phi^2 = phi + 1 (fundamental identity)
+  phi^2 = 1.6180339887498949^2 = 2.6180339887498949
+  phi+1 = 1.6180339887498949 + 1 = 2.6180339887498949
+  Verification: phi^2 - (phi+1) = 0.00e+00 (numerical zero)
+
+DERIVATION: 1/phi = phi - 1 (reciprocal identity)
+  1/phi = 1/1.6180339887498949 = 0.6180339887498948
+  phi-1 = 1.6180339887498949 - 1 = 0.6180339887498949
+  Verification: 1/phi - (phi-1) = -1.11e-16 (numerical zero)
+
+ADDITIONAL PHI IDENTITIES:
+  phi^3 = phi^2 + phi = 4.2360679774997898
+  phi^4 = phi^3 + phi^2 = 6.8541019662496856
+  phi^5 = phi^4 + phi^3 = 11.0901699437494763
+  phi^(-2) = 1/phi^2 = 1 - 1/phi = 0.3819660112501052
+  phi^(-3) = 1/phi^3 = 0.2360679774997897
+  2*phi - 1 = sqrt(5) = 2.2360679774997898
+  Verification: sqrt(5) = 2.2360679774997898
+
+================================================================================
+SECTION 2: TETRAHEDRAL ANGLE DERIVATION
+================================================================================
+
+DERIVATION: Tetrahedral angle = arccos(-1/3)
+
+  In a regular tetrahedron, the angle between any two bonds from
+  the center to vertices is:
+
+  theta_t = arccos(-1/3)
+  theta_t = arccos(-0.3333333333333333)
+  theta_t = 1.9106332362490186 radians
+  theta_t = 109.4712206345 degrees

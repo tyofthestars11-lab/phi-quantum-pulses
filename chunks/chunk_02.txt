@@ -1,0 +1,24 @@
+
+VERIFICATION:
+  cos(109.4712206...deg) = cos(1.9106332362490186 rad)
+  = -0.3333333333333334
+  Expected: -1/3 = -0.3333333333333333
+  Difference: -5.55e-17
+
+TETRAHEDRAL GEOMETRY IN SPHERICAL COORDINATES:
+  Vertex 1: (r, 0, 0) - north pole
+  Vertex 2: (r, 109.471221 deg, 0 deg)
+  Vertex 3: (r, 109.471221 deg, 120 deg)
+  Vertex 4: (r, 109.471221 deg, 240 deg)
+
+================================================================================
+SECTION 3: GOLDEN ANGLE DERIVATION
+================================================================================
+
+DERIVATION: Golden Angle = 360 deg / phi^2 = 360 deg * (2 - phi)
+
+  Method 1: 360/phi^2 = 360/2.6180339887498949
+           = 137.5077640500378493 degrees
+
+  Method 2: 360*(2-phi) = 360*(0.3819660112501051)
+           = 137.5077640500378493 degrees

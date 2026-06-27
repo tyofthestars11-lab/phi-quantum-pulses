@@ -1,0 +1,24 @@
+================================================================================
+PHI-BASED MATHEMATICAL FRAMEWORK FOR SCROLL DECODING
+Non-Cartesian Coordinate Systems & Golden Ratio Analysis
+================================================================================
+
+================================================================================
+SECTION 1: FUNDAMENTAL PHI CONSTANTS
+================================================================================
+
+DERIVATION: Golden Ratio from quadratic equation x^2 - x - 1 = 0
+  Using quadratic formula: x = (1 + sqrt(5)) / 2
+
+  phi (Golden Ratio) = (1 + sqrt(5)) / 2
+  phi = (1 + 2.2360679774997898) / 2
+  phi = 1.6180339887498949
+
+DERIVATION: phi^2 = phi + 1 (fundamental identity)
+  phi^2 = 1.6180339887498949^2 = 2.6180339887498949
+  phi+1 = 1.6180339887498949 + 1 = 2.6180339887498949
+  Verification: phi^2 - (phi+1) = 0.00e+00 (numerical zero)
+
+DERIVATION: 1/phi = phi - 1 (reciprocal identity)
+  1/phi = 1/1.6180339887498949 = 0.6180339887498948
+  phi-1 = 1.6180339887498949 - 1 = 0.6180339887498949

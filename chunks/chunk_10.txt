@@ -1,0 +1,24 @@
+  Y_6^0(theta_t) = sqrt(13/(4*pi)) * P_6(-1/3)
+                   = 1.0171072362820548 * 0.1934156378600823
+                   = 0.1967244448775991
+
+================================================================================
+SECTION 7: SPIRAL-BASED COORDINATE TRANSFORMATIONS
+          FOR SCROLL FIBER MAPPING
+================================================================================
+
+SCROLL GEOMETRY: The papyrus scroll is modeled as a golden spiral
+in polar coordinates, unwinding from center outward.
+
+TRANSFORMATION 1: Polar Golden Spiral to Cartesian
+  r(theta) = a * phi^(theta/pi)
+  x(theta) = r(theta) * cos(theta) = a * phi^(theta/pi) * cos(theta)
+  y(theta) = r(theta) * sin(theta) = a * phi^(theta/pi) * sin(theta)
+
+TRANSFORMATION 2: Arc length along golden spiral
+  ds = sqrt(r^2 + (dr/dtheta)^2) * d_theta
+
+  dr/dtheta = a * phi^(theta/pi) * ln(phi) / pi
+  ln(phi) = 0.4812118250596035
+  ln(phi)/pi = 0.1531744812650166
+
