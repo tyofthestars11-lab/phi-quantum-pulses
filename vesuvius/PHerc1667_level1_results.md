@@ -30,16 +30,32 @@ Note: the global read flattens the 256×256 map and keeps only the first 4,096
 values — the first 16 rows. It is a truncated read, not a full-area
 measurement. The tiled y=160 observations below exist only at levels 2 and 1.
 
-## The y=160 band — repeated at four tiled reads (levels 2 and 1)
+## Stage C — full-pooling multi-seed sweep (2026-09-18, supersedes the y=160 band)
 
-| Read | Tiles | Top band tiles |
-|---|---|---|
-| L2, 64px tiles | 49 | y=160, x=96/128/160/192, lit 0.32–0.33 |
-| L2, 32px tiles (fine) | 45 | 9 of top 20 at y=160, x centered 64–176, max lit 0.2871 |
-| L1, 64px tiles | 49 | y=160, x=96/128/160/192, lit 0.31–0.34, max 0.3398 |
-| L1, 32px tiles (fine) | 45 | 9 of top 20 at y=160, x centered 64–176, max lit 0.2812 |
+The tiled reads above used truncated pooling at a single seed. Stage C
+re-ran the diamond network with the pooling corrected — every pixel pooled,
+no truncation — across all three micron levels, 5 deterministic seeds
+(137, 1001, 2026, 31337, 99991), and 4 controls per level
+(shuffled-depth, shuffled-spatial, uniform-intensity at 59.57,
+edge-vs-interior). Pipeline: `stageC_fullpool_diamond.py`.
 
-**Same band, same x-range, four tiled reads, two resolutions (levels 2 and 1).**
+| Finding | Value |
+|---|---|
+| Seed-stable tiles (top-10 in all 5 seeds) | 0, at every level and tile size |
+| Mean pairwise rank correlation across seeds | −0.054 to +0.029 (seed-random) |
+| y=160-row tile mean rank, full pooling | 13.9–42.5 of 49/64 (mid-pack, not elevated) |
+| Cross-micron survivors | 0 |
+| Shuffled-depth lit fraction vs real | 0.2986–0.2988 vs 0.2939–0.3021 (identical) |
+| Shuffled-spatial lit fraction | 0.3001–0.3015 (identical) |
+| Top-row vs interior, full pooling | 0.2877 vs 0.2860 (no edge effect) |
+
+**The y=160 band did not survive.** It was an artifact of truncated pooling
+at a single seed. The earlier L1 top-row elevation was also a truncation
+artifact. With random weights and corrected pooling, the diamond network
+responds to the bulk intensity histogram only — it cannot distinguish real
+papyrus structure from shuffled noise. This characterizes the instrument; it
+does not rule out ink in the data. A trained/calibrated instrument is the
+next step.
 
 ## iter0 model — the artifact reproduces at all three resolutions
 
@@ -61,19 +77,22 @@ Artifact sizes across levels: L3 3,088 px → L2 3,074 px → L1 3,072 px (full-
 
 The diamond network runs deterministic random weights — not trained ink
 weights. There is no labeled training, no calibration, no negative-control
-distribution, and no glyph validation. The tiled reads flatten each tile and
-keep only the first 512 values (first 8 rows of a 64px tile, first 16 rows of
-a 32px tile) — truncated pooling, not full-tile measurement.
+distribution, and no glyph validation. The first tiled reads flattened each
+tile and kept only the first 512 values (first 8 rows of a 64px tile, first
+16 rows of a 32px tile) — truncated pooling, not full-tile measurement.
 
-The y=160 concentration repeats across the four tiled reads as a
-computational output. That repetition is measured; it is not evidence of ink,
-not evidence of letters, and not a validated physical band. No controls have
-been run yet: multiple seeds, shuffled-depth, shuffled-spatial, and
-uniform-intensity controls are the next step. Letters are not claimed.
+Stage C corrected the pooling and ran 5 seeds with 4 controls at all three
+micron levels. Result: zero seed-stable tiles, hotspot maps seed-random
+(rank correlation −0.054 to +0.029), controls identical to real data. The
+instrument as built has no structural specificity. Letters are not claimed.
+Ink is not ruled out — the data still holds it, the instrument cannot yet
+see it.
 
-## New flag
+## New flag — closed by Stage C
 
-At level-1, the top-2 tile rows run elevated (0.2857 vs interior 0.2183); level-2 was even there (0.2044 vs 0.2072). Unclassified — structure or edge artifact. Open.
+At level-1, the top-2 tile rows ran elevated (0.2857 vs interior 0.2183) in
+the truncated reads. Stage C with full pooling: 0.2877 vs 0.2860 — no edge
+effect. The elevation was a truncation artifact. Closed.
 
 ## Files
 
