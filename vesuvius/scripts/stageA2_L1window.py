@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""PATH4 Stage A2-L2 — build 124-layer input from LEVEL-2 zarr (4.8 um/voxel).
+"""PATH4 Stage A2-L1 — build 248-layer input from LEVEL-1 zarr (4.8 um/voxel).
 
 Paradigm shift: stop waiting for the Vesuvius team's Lane D — the public zarr
 already carries finer-than-19.2 data, free on S3.
 
 Level-1 vs level-3 (adapted from stageA2_L3window.py):
-  LV=1, DIV=2. Level-1 shape [9269, 3808, 3808] (z,y,x), chunks 128^3, uint8.
+  LV=1, DIV=2. Level-1 shape [18538, 7615, 7615] (z,y,x), chunks 128^3, uint8.
   Same physical patch window as L3: the tifxyz flat-map pixel grid is
   resolution-independent, so the SAME 256x256 tifxyz px window at
   (u,v) = (19409, 561) covers the same physical patch; dividing its

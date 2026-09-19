@@ -26,7 +26,11 @@ Mean 59.57 is **identical** to level-2's mean — same physical window, confirme
 | Level-2 | 9.6 µm | 1,224/4,096 (29.9%) | 1.46 |
 | Level-1 | 4.8 µm | 1,199/4,096 (29.3%) | 1.53 |
 
-## The y=160 band — reproduced at four reads
+Note: the global read flattens the 256×256 map and keeps only the first 4,096
+values — the first 16 rows. It is a truncated read, not a full-area
+measurement. The tiled y=160 observations below exist only at levels 2 and 1.
+
+## The y=160 band — repeated at four tiled reads (levels 2 and 1)
 
 | Read | Tiles | Top band tiles |
 |---|---|---|
@@ -35,7 +39,7 @@ Mean 59.57 is **identical** to level-2's mean — same physical window, confirme
 | L1, 64px tiles | 49 | y=160, x=96/128/160/192, lit 0.31–0.34, max 0.3398 |
 | L1, 32px tiles (fine) | 45 | 9 of top 20 at y=160, x centered 64–176, max lit 0.2812 |
 
-**Same band, same x-range, four reads, three resolutions.**
+**Same band, same x-range, four tiled reads, two resolutions (levels 2 and 1).**
 
 ## iter0 model — the artifact reproduces at all three resolutions
 
@@ -55,7 +59,17 @@ Artifact sizes across levels: L3 3,088 px → L2 3,074 px → L1 3,072 px (full-
 
 ## Boundary (plain)
 
-The diamond network runs deterministic random weights — its outputs are computational structure reads, not evidence of ink or letters. The y=160 band is real and repeatable across instruments and resolutions. Letters are not claimed.
+The diamond network runs deterministic random weights — not trained ink
+weights. There is no labeled training, no calibration, no negative-control
+distribution, and no glyph validation. The tiled reads flatten each tile and
+keep only the first 512 values (first 8 rows of a 64px tile, first 16 rows of
+a 32px tile) — truncated pooling, not full-tile measurement.
+
+The y=160 concentration repeats across the four tiled reads as a
+computational output. That repetition is measured; it is not evidence of ink,
+not evidence of letters, and not a validated physical band. No controls have
+been run yet: multiple seeds, shuffled-depth, shuffled-spatial, and
+uniform-intensity controls are the next step. Letters are not claimed.
 
 ## New flag
 
