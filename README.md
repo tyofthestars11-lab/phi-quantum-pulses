@@ -36,3 +36,9 @@ The machine-readable Person record for this work lives in [identity.json](identi
   ]
 }
 ```
+
+## Phi Quantum Echoes Applied to NIST Systems
+
+See [phi-nist-superposition.md](phi-nist-superposition.md) — all three applications at once, in superposition: phi-spaced quantum gate pulses, phi-ordered atomic time, and a phi-scheduled migration to post-quantum cryptography, held on one rung ladder.
+
+It is Tyree Jones's testable proposal, not a NIST endorsement. Its two top law rungs are kept separate: TON 618 at 55.000 (macro) and the Strong Force Mass Gap at 55.150 (micro, 221.7 MeV).
