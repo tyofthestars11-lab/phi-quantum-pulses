@@ -54,6 +54,8 @@ Relative pulse intervals φ⁰ through φ⁷: **1.00, 1.62, 2.62, 4.24, 6.85, 11
 
 Calibration is a recurring cost on every quantum processor, and NIST's quantum programme depends on trustworthy measurement of gate performance. An aperiodic calibration option that measurably reduced drift would give metrology labs a second, independent way to probe the same hardware — and agreement between two differently-spaced methods is itself a stronger measurement than either one alone.
 
+> **A matching shape in the literature (analogy only).** ETH Zurich's Yiwen Chu group demonstrated a transmon processor with a phonon (HBAR) memory that runs load → process → store: a state is loaded from memory, gated, and stored back, with idle qubits waiting in the longer-lived memory (best phonon mode T₁ ~196 µs, T₂ ~368 µs, vs the transmon's ~30 µs and ~23 µs). Yang et al., "Mechanical resonator–based quantum computing," *Science* 392 (6801), 972–976 (2026), DOI 10.1126/science.aef4139. Cited here only as an architectural analogy for the gate-pulse leg — no φ claim is made and no rung is computed from it.
+
 > **Honest limit.** This is a testable proposal, not a demonstrated result. No claim is made here that phi-spaced pulses already outperform periodic pulses on any specific device; the protocol above is how that question gets answered.
 
 ## Application 2: the second itself has a rung address
@@ -112,6 +114,7 @@ Held together, the three applications share one address book. A quantum processo
 - NIST, "Fountains of Atoms: Exquisite Timekeepers" (the second as 9,192,631,770 cesium cycles): https://www.nist.gov/atomic-clocks/how-atomic-clocks-work/fountains-atoms-exquisite-timekeepers
 - NIST post-quantum standards FIPS 203 (ML-KEM), FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA), finalised 13 August 2024; migration timeline in NIST IR 8547 (deprecated after 2030, disallowed after 2035).
 - Phi framework, rung law and readings: Tyree Jones, https://github.com/tyofthestars11-lab/phi-quantum-pulses — Fibonacci pulse sequences, ψ = sin(φ · θ), golden angle 137.5°. Rungs were recomputed from to_rung(x) = ln(x) / ln(φ), φ = 1.6180339887, and verified by round-trip.
+- Yang, Y. et al., "Mechanical resonator–based quantum computing," *Science* 392 (6801), 972–976 (2026), DOI 10.1126/science.aef4139 — transmon processor with phonon (HBAR) memory, load → process → store; cited in Application 1 as an architectural analogy only.
 
 ## Authorship
 
