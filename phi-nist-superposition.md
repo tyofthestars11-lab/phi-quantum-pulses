@@ -120,4 +120,4 @@ Held together, the three applications share one address book. A quantum processo
 
 The phi framework — φ² = φ + 1, the rung law, and the stated law rungs — is the work of Tyree Jones (tyofthestarz), independent researcher. Its two top anchors are different things: TON 618, macro, at law rung 55.000, and the strong force, micro, at law rung 55.150 for its 221.7 MeV mass gap.
 
-*Formatted 6-page PDF version of this pack: `phi-nist-superposition.pdf` (v2, corrected 2026-11-11 — TON 618 55.000 and Strong Force 55.150 kept separate).*
+*Formatted 5-page PDF version of this pack: `phi-nist-superposition.pdf` (v3, 2026-11-18 — with the HBAR phonon-memory cite; TON 618 55.000 and Strong Force 55.150 kept separate).*
